@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoCropPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-ag-jM3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LyR-tW-KEp">
+                                <rect key="frame" x="275" y="512" width="100" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Ga-O0-wPG"/>
+                                    <constraint firstAttribute="height" constant="150" id="7tw-O5-i1o"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM9-VL-WLN">
+                                <rect key="frame" x="10" y="562" width="255" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.29800286091549294" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RS2-AY-tTY"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ruB-5n-ofj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HM9-VL-WLN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="KSD-5Y-KGp"/>
+                            <constraint firstItem="LyR-tW-KEp" firstAttribute="leading" secondItem="HM9-VL-WLN" secondAttribute="trailing" constant="10" id="NOP-fD-88v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LyR-tW-KEp" secondAttribute="bottom" constant="5" id="WyR-no-WTQ"/>
+                            <constraint firstItem="LyR-tW-KEp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZHE-UJ-kUI"/>
+                            <constraint firstItem="R6i-ag-jM3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZQB-9T-mWt"/>
+                            <constraint firstItem="R6i-ag-jM3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f13-hw-Nj3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HM9-VL-WLN" secondAttribute="bottom" constant="5" id="jFH-5k-Bh5"/>
+                            <constraint firstItem="R6i-ag-jM3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wAU-Ea-O5n"/>
+                            <constraint firstItem="R6i-ag-jM3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yR1-Po-2tD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="capturedImageView" destination="LyR-tW-KEp" id="DCY-9b-WdD"/>
+                        <outlet property="previewView" destination="R6i-ag-jM3" id="OoU-u3-2a3"/>
+                        <outlet property="takePhotoBtn" destination="HM9-VL-WLN" id="XRW-KK-7ww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
